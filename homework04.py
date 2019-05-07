@@ -64,7 +64,7 @@ def encode(val):
             return b"d" + b"".join(map(encode, itertools.chain(*items))) + b"e"
         else:
             raise ValueError("dict keys should be bytes")
-    raise ValueError("Allowed types: int, bytes, list, dict; not %s", type(val))
+    raise ValueError("Allowed: int, bytes, list, dict", type(val))
 
 
 def decode(val):
